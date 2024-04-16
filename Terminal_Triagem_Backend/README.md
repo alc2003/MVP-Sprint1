@@ -1,4 +1,4 @@
-# Minha API
+# Meu MVP - Terminal de triagem
 
 Este projeto consiste em um protótipo de um terminal de triagem para classificação de risco de um hospital.
 Onde o paciente chegaao hospital, 
