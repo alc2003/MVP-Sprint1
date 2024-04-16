@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Projeto</title>
+</head>
+
+<body>
+    <!-- Cabeçalho de informações do sistema -->
+    <header>
+        <div class="title">
+            <h1>Busca de Pacientes</h1>
+        </div>
+        <div class="banner">
+            <img src="https://img.freepik.com/vetores-gratis/fundo-de-dia-internacional-de-enfermeiras-desenhadas-a-mao_23-2149341238.jpg?w=1380&t=st=1712418795~exp=1712419395~hmac=b34d91b08564148801c4041b66ecc8a1b79ebedda2b922f483b04535beace61e"
+                alt="y">
+        </div>
+    </header>
+
+    <!--Buscar Paciente -->
+    <section class="newItem">
+        <input type="text" id="id_paciente" placeholder="Id do Paciente:">
+        <button onclick="getList()" class="addBtn">Buscar Paciente</button>
+    </section>
+    <!-- Paciente Selecionado -->
+    <section class="items">
+        <table id="myTable">
+            <tr>
+                <th>Nome</th>
+                <th>CNS</th>
+                <th>Id Paciente</th>
+            </tr>
+        </table>
+    </section>
+
+
+    <!-- Triagem de Pacientes -->
+    <header>
+        <div class="title">
+            <h1>Triagem de Pacientes</h1>
+        </div>
+        <div class="banner">
+            <img src="https://img.freepik.com/vetores-gratis/fundo-de-dia-internacional-de-enfermeiras-desenhadas-a-mao_23-2149341238.jpg?w=1380&t=st=1712418795~exp=1712419395~hmac=b34d91b08564148801c4041b66ecc8a1b79ebedda2b922f483b04535beace61e"
+                alt="y">
+        </div>
+    </header>
+    <!-- Informações do atendimento do Paciente Selecionado -->
+    <section class="items">
+        <table id="myTableAtendimento">
+            <tr>
+                <th>
+                    <label for="Paciente">Paciente Atendido:</label>
+                </th>
+                <td>
+                    <input type="input" id="id_paciente_atendido" name="paciente_atendido" disabled>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="codigoQueixa">Código da Queixa Principal:</label>
+                </th>
+                <td>
+                    <select id="hda_cod_queixa_principal" name="codigoQueixa">
+                        <option value="1">Dor Fraca</option>
+                        <option value="2">Dor Média</option>
+                        <option value="3">Dor Forte</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="queixaPrincipal">Queixa Principal:</label>
+                </th>
+                <td>
+                    <textarea id="hda_queixa_principal" name="queixaPrincipal" rows="4" cols="50"
+                        maxlength="200"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="hipertensao">Tem Hipertensão:</label>
+                </th>
+                <td>
+                    <input type="checkbox" id="hpr_hipertensao" name="hipertensao" value="S">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="diabetes">Tem Diabetes:</label>
+                </th>
+                <td>
+                    <input type="checkbox" id="hpr_diabetes" name="diabetes" value="S">
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="cancer">Teve Câncer:</label>
+                </th>
+                <td>
+                    <input type="checkbox" id="hpr_cancer" name="cancer" value="S">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <button onclick="newItemAtend()" class="addBtn">Adicionar Atendimento</button>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+
+
+    <!-- Informações da ordem de atendimentos -->
+    <header>
+        <div class="title">
+            <h1>Fila de Atendimentos</h1>
+        </div>
+        <div class="banner">
+            <img src="https://img.freepik.com/vetores-gratis/fundo-de-dia-internacional-de-enfermeiras-desenhadas-a-mao_23-2149341238.jpg?w=1380&t=st=1712418795~exp=1712419395~hmac=b34d91b08564148801c4041b66ecc8a1b79ebedda2b922f483b04535beace61e"
+                alt="y">
+        </div>
+    </header>
+    <!-- Fila de Atendimentos -->
+    <section class="items">
+        <table id="myTableFila">
+            <tr>
+                <th>Nome Paciente</th>
+                <th>Id Atend</th>
+                <th>Id Paciente</th>
+                <th>CNS</th>
+                <th>Ordem</th>
+                <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px"></th>
+            </tr>
+        </table>
+    </section>
+
+
+     <!-- Rodapé -->
+     <header>
+        <div class="banner">
+            <img src="https://img.freepik.com/vetores-gratis/fundo-de-dia-internacional-de-enfermeiras-desenhadas-a-mao_23-2149341238.jpg?w=1380&t=st=1712418795~exp=1712419395~hmac=b34d91b08564148801c4041b66ecc8a1b79ebedda2b922f483b04535beace61e"
+                alt="y">
+        </div>
+    </header>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
